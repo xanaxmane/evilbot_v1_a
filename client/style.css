@@ -1,8 +1,8 @@
 .textbox {
   text-align: center;
   color:rgb(0, 0, 0);
-  
 }
+
 form textarea, form input[type="text"] {
   position:relative;
   background:#c62929;
@@ -14,31 +14,61 @@ form textarea, form input[type="text"] {
   border-radius:2px;
   box-shadow:inset 0 0 2px #ff8181;
   border:none;
-
   width: 350px;
   height: 70px;
   left: 50%;
   top: 50%;
   margin-left: -175px;
-
-  
 }
+
+@media only screen and (max-width: 600px) {
+  form textarea, form input[type="text"] {
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  form textarea, form input[type="text"] {
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+  }
+}
+
 .twitter{
   color:red;
   right: 10%;
   
 }
-.elerhetosegek{
+.elerhetosegek {
   position: absolute;
-  color:red;
+  color: red;
   right: 1%;
   bottom: 1%;
 }
 
-.donate{
-  position: relative;
-  margin-bottom: 10%;
+@media only screen and (max-width: 600px) {
+  .elerhetosegek {
+    right: 1%;
+    bottom: 1%;
+    position: fixed;
+    padding-bottom: 50px;
+  }
+  .donate {
+    top: 1%;
+    position: fixed;
+    padding-top: 50px;
+  }
 }
+
+
+
 .donate2{
   color:#c62929;
   position: fixed;
@@ -94,6 +124,16 @@ form #textarea {
     text-align-last: center;
 }
 
+@media only screen and (max-width: 600px) {
+  form #textarea {
+    width: 100%;
+    left:
+	0;
+    top: 0;
+    margin-left: 0;
+  }
+}
+	
 body,html{
   background:#000;
   height:100vh;
@@ -111,24 +151,28 @@ body,html{
 }
 
 button {
-	width: 150px;
-	height: 30px;
-	cursor: pointer;
-	font-size: 20px;
-	font-weight: bold;
-	color: black;
-	background: rgb(0, 0, 0);
-	border: 2px solid rgb(255, 0, 0);
+  width: 150px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  background: rgb(0, 0, 0);
+  border: 2px solid rgb(255, 0, 0);
   margin-top: 5px;
   margin-bottom: 5px;
-
-	box-shadow: 5px 5px 0 black,
-		-5px -5px 0 black,
-		-5px 5px 0 black,
-		5px -5px 0 black;
-	transition: 500ms ease-in-out;
+  box-shadow: 5px 5px 0 black,
+    -5px -5px 0 black,
+    -5px 5px 0 black,
+    5px -5px 0 black;
+  transition: 500ms ease-in-out;
 }
 
+@media only screen and (max-width: 600px) {
+  button {
+    width: 100%;
+  }
+}
 
 
 
