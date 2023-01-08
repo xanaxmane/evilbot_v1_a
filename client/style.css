@@ -1,33 +1,4 @@
-a.patreon-button {
-  border-radius: 5px;
-  background-color: #ff424d;
-  min-height: 42px;
-  border: none;
-  display: grid;
-  place-items: center;
-}
-a.patreon-button svg {
-  max-height: 12px;
-  fill: white;
-}
-a.patreon-button:active,
-a.patreon-button:active:focus,
-a.patreon-button:hover {
-  background-color: #e13d47;
-}
 
-.dark-palette a.patreon-button {
-  background-color: white;
-}
-
-.dark-palette a.patreon-button svg {
-  fill: #ff424d;
-}
-.dark-palette a.patreon-button:active,
-.dark-palette a.patreon-button:active:focus,
-.dark-palette a.patreon-button:hover {
-  background-color: #efefef;
-}
 
 
 .textbox {
@@ -88,7 +59,7 @@ form textarea, form input[type="text"] {
 @media only screen and (max-width: 600px) {
   .elerhetosegek {
     right: 1%;
-    bottom: 1%;
+    top: 1%;
     position: fixed;
     padding-bottom: 50px;
   }
