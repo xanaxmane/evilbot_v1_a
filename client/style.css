@@ -1,3 +1,35 @@
+a.patreon-button {
+  border-radius: 5px;
+  background-color: #ff424d;
+  min-height: 42px;
+  border: none;
+  display: grid;
+  place-items: center;
+}
+a.patreon-button svg {
+  max-height: 12px;
+  fill: white;
+}
+a.patreon-button:active,
+a.patreon-button:active:focus,
+a.patreon-button:hover {
+  background-color: #e13d47;
+}
+
+.dark-palette a.patreon-button {
+  background-color: white;
+}
+
+.dark-palette a.patreon-button svg {
+  fill: #ff424d;
+}
+.dark-palette a.patreon-button:active,
+.dark-palette a.patreon-button:active:focus,
+.dark-palette a.patreon-button:hover {
+  background-color: #efefef;
+}
+
+
 .textbox {
   text-align: center;
   color:rgb(0, 0, 0);
