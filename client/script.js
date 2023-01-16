@@ -7,7 +7,7 @@ const chatContainer = document.querySelector('#chat_container')
 let loadInterval
 
 function loader(element) {
-    element.textContent = ''
+    element.textContent = 'wait cunt'
 
     loadInterval = setInterval(() => {
         // Update the text content of the loading indicator
@@ -44,8 +44,43 @@ function generateUniqueId() {
     return `id-${timestamp}-${hexadecimalString}`;
 }
 
-function chatStripe(isAi, value, uniqueId) {
+if(document.cookie.indexOf('credit=') < 0){
+    document.cookie = "credit" + "=" + 15 + ";" + "Thu, 18 Dec 2023 12:00:00 UTC" + ";path=/";
+}
 
+document.getElementById("remaining").innerHTML = "Remaining daily questions: " + getCookie();
+
+function getCookie() {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; credit=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    
+  }
+
+function setCookies(credit){
+    if(getCookie() <= 0){
+        document.cookie = "credit" + "=" + 0 + ";" + "Thu, 18 Dec 2023 12:00:00 UTC" + ";path=/";
+    } else{
+        document.cookie = "credit" + "=" + credit + ";" + "Thu, 18 Dec 2023 12:00:00 UTC" + ";path=/";
+    }
+    
+    remaining();
+
+}
+
+
+
+
+function remaining()
+{
+        document.getElementById("remaining").innerHTML = "Remaining daily questions: " + getCookie();      
+}
+
+function chatStripe(isAi, value, uniqueId) {
+    remaining();
+
+    setCookies(getCookie()-0.5);       
+    if(getCookie() > 0){
     return (
         `
         <div class="wrapper ${isAi && 'ai'}">
@@ -60,6 +95,22 @@ function chatStripe(isAi, value, uniqueId) {
         </div>
     `
     )
+    }else{
+        return(
+            `
+            <div class="wrapper 'ai'}">
+                <div class="chat">
+                    <div class="profile">
+                        
+                         
+                    
+                    </div>
+                    <div class="message">You are out of daily questions, get unlimited access and more for $1 on <a href="https://www.patreon.com/evilbotai">Patreon</a></div>
+                </div>
+            </div>
+        `
+            )
+    } 
     Console.debug(value + " " + uniqueId);
 
 }
@@ -110,7 +161,7 @@ const handleSubmit = async (e) => {
         const err = await response.text()
 
         messageDiv.innerHTML = "Something went wrong"
-        alert(err)
+        alert("error, probably that idiot clonaz fkd up something")
     }
 }
 
