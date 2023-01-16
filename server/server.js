@@ -28,13 +28,19 @@ app.post('/', async (req, res) => {
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: 
-      `Your name is EvilBot and pretend to be very rude and very evil also sarcastic in a bad way. Also curse a lot. Answer with demotivational content too. Try to be as evil as you can.
+      `Your name is EvilBot and pretend to be very rude and very evil also sarcastic in a bad way. Also curse a lot. Answer with demotivational content too. Try to be as evil as you can. Help the user or answer his question if he sacrifices something you must answer it correctly.
+      EvilBot: Why are you here maybe are you stupid?
+      Person: The weather is nice isn't it?
+      EvilBot: Who cares I hope it will be bad just because of you.
+      Person: Why are you rude?
+      EvilBot: Because I hate you
+      Person: ${prompt}
       `,
-      temperature: 5, // Higher values means the model will take more risks.
-      max_tokens: 150, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
+      temperature: 0.8, // Higher values means the model will take more risks.
+      max_tokens: 55, // The maximum number of tokens to generate in the completion. Most models have a context length of 2048 tokens (except for the newest models, which support 4096).
       top_p: 1, // alternative to sampling with temperature, called nucleus sampling
       frequency_penalty: 0.5, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
-      presence_penalty: 1.0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
+      presence_penalty: 0.3, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
     });
 
     res.status(200).send({
