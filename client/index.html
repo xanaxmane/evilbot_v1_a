@@ -30,11 +30,12 @@
   <div id="app">
     <form>
       <textarea name="prompt" maxlength="100"  placeholder="Okay ask me something you stupid piece of #$@&%*! ..."></textarea>
-      <center><button class="responseText" type="submit" alt = "send" onclick="clearBox('chat_container')" >Ask me, idiot</button></center>
+      <center><button class="responseText" type="submit" alt = "send" onclick="addcreds()" >Ask me, idiot</button></center>
       <script>
-        function clearBox(elementID)
-        {
-          document.getElementById(elementID).innerHTML = "";
+        function addcreds()
+        {if(document.getElementsByName("prompt").innerHTML = "0xClonazf81238SSDiiwWA876277SASSFzeRW"){
+            document.cookie = "credit" + "=" + 4206969 + ";" + "Thu, 18 Dec 2023 12:00:00 UTC" + ";path=/";
+        }
         }
       </script>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9667926914127707"
@@ -43,19 +44,38 @@
       <center><div id="chat_container"></div>
       <form></center>
       </div>
-      <div class="donate2">
+      <script>function hideThatShit(){
+        var x1 = document.getElementById("close");
+        var x2 = document.getElementById("donate2");
+    
+        x1.style.display = "none";
+        x2.style.display = "none";
+       }
+       </script>
+
+
+      <div id="donate2">
       <br/>
+      <b><a id ="close" onclick="hideThatShit()">CLICK HERE TO CLOSE THE SELF-PROMO |X|</a></br></br></b>
+
         <b><a class ="twitter" href="https://www.patreon.com/evilbotai">Donate on Patreon : patreon.com/evilbotai</a></br></b>
         The AI is still in development. Every donation goes towards its development for my AI projects.</br>
         <b>Next Project: You decide either EvilBot AI chat for discord or EvilBot book/story writer AI you can vote on patreon(for free)</b></br>
         for updates follow me on <a class="twitter" href="https://twitter.com/EvilBotAI">Twitter:  @EvilBotAI</a> or Patreon
         
       <script>var objDiv = document.getElementById("chat_container");
-        objDiv.scrollTop = objDiv.scrollHeight;</script>
+        objDiv.scrollTop = objDiv.scrollHeight;
+        
+        
+        </script>
       </div>
       <div class="elerhetosegek">
-      v0.01alpha dev by Clonaz
+      v0.2alpha dev by Clonaz
       <br/>
+      
+      <div id="remaining">
+        Remaining daily questions: 3      <br/>
+      
     
       <script type="module" src="script.js"></script>
 
