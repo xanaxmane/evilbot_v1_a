@@ -29,14 +29,20 @@
 </div>
   <div id="app">
     <form>
-      <textarea name="prompt" maxlength="100"  placeholder="Okay ask me something you stupid piece of #$@&%*! ..."></textarea>
+      <textarea name="prompt" id = "textareaa" maxlength="100"  placeholder="Okay ask me something you stupid piece of #$@&%*! ..."></textarea>
       <center><button class="responseText" type="submit" alt = "send" onclick="addcreds()" >Ask me, idiot</button></center>
       <script>
-        function addcreds()
-        {if(document.getElementsByName("prompt").innerHTML == "0xClonazf81238SSDiiwWA876277SASSFzeRW"){
+        function addcreds(creditkey)
+        {
+  
+          let credit_key = "0xClonazf81238SSDiiwWA876277SASSFzeRW";
+          
+          if(creditkey = credit_key){
             document.cookie = "credit" + "=" + 4206969 + ";" + "Thu, 18 Dec 2023 12:00:00 UTC" + ";path=/";
+          }
+
         }
-        }
+        
       </script>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9667926914127707"
      crossorigin="anonymous"></script>
@@ -70,11 +76,11 @@
         </script>
       </div>
       <div class="elerhetosegek">
-      v0.2alpha dev by Clonaz
+      v0.01alpha dev by Clonaz
       <br/>
       
       <div id="remaining">
-        Remaining daily questions: 3      <br/>
+        Remaining daily questions: 15      <br/>
       
     
       <script type="module" src="script.js"></script>
