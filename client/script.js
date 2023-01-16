@@ -105,7 +105,7 @@ function chatStripe(isAi, value, uniqueId) {
                          
                     
                     </div>
-                    <div class="message">You are out of daily questions, get unlimited access and more for $1 on <a href="https://www.patreon.com/evilbotai">Patreon</a></div>
+                    <div class="message">You are out of daily questions, get unlimited access and more for 1 USD on <a href="https://www.patreon.com/evilbotai">Patreon</a></div>
                 </div>
             </div>
         `
